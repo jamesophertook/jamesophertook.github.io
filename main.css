@@ -1,8 +1,8 @@
 * {box-sizing: border-box;}
 
 .wrapper {
-    height: 95vh;
-    border: 4px solid transparent;
+    height: 90vh;
+    border: 0 solid transparent;
     border-radius: 5px;
     margin: 0 auto;
     display: grid;
@@ -83,21 +83,26 @@ body{
     background-color: rgba(0, 0, 0, 0.075);
     padding: 1em;
     margin: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
 
 
 }
 
 #content:nth-child(even){
-    display: grid;
-    width: 100px;
-    height: 100px;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    margin: 25px;
     background-color: red;
 }
 
 #content:nth-child(odd){
-    display: grid;
-    width: 100px;
-    height: 100px;
+    display: inline-block;
+    width: 400px;
+    height: 400px;
+    margin: 25px;
     background-color: green;
 }
 
