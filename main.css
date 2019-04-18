@@ -1,7 +1,7 @@
 * {box-sizing: border-box;}
 
 .wrapper {
-    height: 100%;
+    height: 95vh;
     border: 4px solid transparent;
     border-radius: 5px;
     margin: 0 auto;
@@ -32,12 +32,12 @@
    
     .wrapper {
         grid-template-columns: 250px 1fr 250px;
-        grid-template-rows: 30px 1fr 30px;
+        grid-template-rows: 30px 87vh 30px;
         gap: 20px;
         grid-template-areas: 
-          "t t t"
           "p c n"
-          "f f f";
+          "p c n"
+          "p c n";
     }
 }
 
@@ -52,29 +52,39 @@ body{
 .nav{
     grid-area: n;
     background-color: black;
-    padding: 300px 25% 300px;
+    padding: 300px 25%;
 
     color: white;
     font-size: 20px;
     line-height: 50px;
 }
 
+#copyright {
+    color:white;
+}
+
+#title{
+    margin-left: 35px;
+}
+
 .page{
     grid-area: p;
     background-color: black;
-
+    margin-bottom: -100px;
     font-size: 10em;
     color: white;
     writing-mode: vertical-lr;
-    text-orientation: sideways-right;
+    /* text-orientation: sideways-right; */
     text-align: center;
 }
 
 .content{
     grid-area: c;
-    background-color: rgba(66, 22, 88, .2);
+    background-color: rgba(0, 0, 0, 0.075);
     padding: 1em;
-    margin: auto; 
+    margin: auto;
+
+
 }
 
 #content:nth-child(even){
@@ -107,4 +117,19 @@ p:hover {
     grid-area: t;
 
     background-color: black;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:active {
+    color: white;
+    text-decoration: underline;
 }
