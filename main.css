@@ -1,72 +1,83 @@
-* {box-sizing: border-box;}
 
+    /* this is the styling for the grid used in the website */
+* {box-sizing: border-box;}
 .wrapper {
     height: 90vh;
     border: 0 solid transparent;
     border-radius: 5px;
     margin: 0 auto;
     display: grid;
-}
-
+    }
 .wrapper > div {
     margin:5px;
-}
+    }
 
-@media (max-width: 749px) {
-   
+    /* this is the mobile format */
+@media (max-width: 999px) {
     .wrapper {
-        grid-template-columns: 150px auto auto auto auto 150px;
-        grid-template-rows: 50px auto auto auto 50px;
+        grid-template-columns: 1fr 200px;
+        grid-template-rows: 30px 87vh 30px;
         column-gap: 0px;
         row-gap: 0px;
-        grid-template-areas: 
-          "p t t t n"
-          "p c c c n"
-          "p c c c n"
-          "p c c c n"
-          "p f f f n";
+        grid-template-areas:
+          "c n"
+          "c n"
+          "f f";}
+    .page{
+        display: none;}
+    .content{
+        display:block;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        white-space: nowrap;}
     }
-}
 
-@media (min-width: 750px) {
-   
+    /* this is the desktop/pc format */
+@media (min-width: 1000px) {
     .wrapper {
         grid-template-columns: 250px 1fr 250px;
-        grid-template-rows: 30px 87vh 30px;
+        grid-template-rows: 10px 87vh 50px;
         gap: 20px;
         grid-template-areas: 
           "p c n"
           "p c n"
-          "p c n";
+          "f f f";}
     }
-}
 
-
+    /* this styles the website's background */
 body{
-    background-image: url('colored.svg');
+    background-image: url('imageVideoFiles/colorful.svg');
     background-size: 100% auto;
-    padding: 1em;
-}
+    padding: 1em;}
 
-
+    /* this styles the navigation bar */
 .nav{
     grid-area: n;
     background-color: black;
     padding: 300px 25%;
-
     color: white;
-    font-size: 20px;
+    font-size: 24px;
     line-height: 50px;
-}
+    }
 
-#copyright {
-    color:white;
-}
+    /* this styles the links in the nav bar */
+a:link {
+    color: white;
+    text-decoration: none;}
+a:visited {
+    color: white;
+    text-decoration: none;}
+a:active {
+    color: white;
+    text-decoration: underline;}
 
-#title{
-    margin-left: 35px;
-}
+    /* this adds the jello effect to the nav elements and the title of the page */
+p:hover {
+    animation: jello 2s;
+    -webkit-animation: jello 2s;
+    }
 
+    /* this styles the title of the page on the left */
 .page{
     grid-area: p;
     background-color: black;
@@ -74,67 +85,63 @@ body{
     font-size: 10em;
     color: white;
     writing-mode: vertical-lr;
-    /* text-orientation: sideways-right; */
     text-align: center;
-}
+    }
+#title{
+    margin-left: 35px;
+    }
 
+    /* this styles the content for the about and contact page */
+.contentbio{
+    grid-area: c;
+    background-color: rgba(0, 0, 0, 0.075);
+    padding: 32px;
+    margin: auto;
+    }
+#bio{
+    width: 400px;
+    margin: auto;
+    padding: auto;
+    margin-top:300px;
+    font-family: arial;
+    font-size: 24px;
+    }
+
+    /* this styles he content for the resume page */
+.contentresume{
+    grid-area: c;
+    background-color: rgba(0, 0, 0, 0.075);
+    padding: 32px;
+    font-family: arial;
+    margin: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    white-space: nowrap;
+    }
+
+    /* this styles the content for the portfolio page */
 .content{
     grid-area: c;
     background-color: rgba(0, 0, 0, 0.075);
-    padding: 1em;
-    margin: auto;
-    overflow-x: scroll;
-    overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     white-space: nowrap;
-
-
-}
-
+    }
+#content{
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    }
 #content:nth-child(even){
-    display: inline-block;
-    width: 400px;
-    height: 400px;
-    margin: 25px;
     background-color: red;
-}
-
+    }
 #content:nth-child(odd){
-    display: inline-block;
-    width: 400px;
-    height: 400px;
-    margin: 25px;
     background-color: green;
-}
+    }
 
-p:hover {
-    animation: jello 2s;
-    -webkit-animation: jello 2s;
-}
-
-.footer{
-    grid-area: f;
-    background-color: black;
-
-    color: white;
-}
-
-.topbar {
-    grid-area: t;
-
-    background-color: black;
-}
-
-a:link {
-    color: white;
-    text-decoration: none;
-}
-
-a:visited {
-    color: white;
-    text-decoration: none;
-}
-
-a:active {
-    color: white;
-    text-decoration: underline;
+    /* this styles the footer */
+#foot{
+    font-size: 18px;
+    float:right;
+    padding-right: 25px;
 }

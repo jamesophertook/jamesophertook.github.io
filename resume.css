@@ -1,0 +1,46 @@
+  
+  /* this styles the "James Tooker" header in the resume */
+h1 {
+  font-family: 'major mono display';
+  font-size: 3.25em;
+  font-weight: lighter;
+  letter-spacing: 12px;
+  }
+
+  /* this styles the categories in the resume */
+h2{
+  font-family: arial, sans-serif;
+  font-size: 2em;
+  }
+
+  /* this styles the resume's body text */
+body{
+  font-size: 21px;
+  }
+
+  /* this styles the education section in the resume */
+#edu{
+  display: block;
+  width: 75%;
+  float:left;
+  }
+
+  /* this styles the job experience section in the resume */
+#exp{
+  display: block;
+  width: 75%;
+  float:left;
+  }
+
+  /* this styles the academic achievements section in the resume */
+#ach{
+  display: block;
+  width: 75%;
+  float:left;
+  }
+
+  /* this styles the dates found in the resume */
+.dates{
+  display: block;
+  float: right;
+  }
