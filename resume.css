@@ -9,6 +9,7 @@ h1 {
 
   /* this styles the categories in the resume */
 h2{
+  display: block;
   font-family: arial, sans-serif;
   font-size: 2em;
   }
@@ -20,27 +21,24 @@ body{
 
   /* this styles the education section in the resume */
 #edu{
-  display: block;
+  display: inline-block;
   width: 75%;
-  float:left;
   }
 
   /* this styles the job experience section in the resume */
 #exp{
-  display: block;
+  display: inline-block;
   width: 75%;
-  float:left;
   }
 
   /* this styles the academic achievements section in the resume */
 #ach{
-  display: block;
+  display: inline-block;
   width: 75%;
-  float:left;
   }
 
   /* this styles the dates found in the resume */
 .dates{
-  display: block;
   float: right;
+  width:25%;
   }

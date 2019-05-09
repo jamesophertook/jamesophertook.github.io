@@ -30,6 +30,8 @@
         overflow-x: hidden;
         overflow-y: scroll;
         white-space: nowrap;}
+    img {
+        width: 15px;}
     }
 
     /* this is the desktop/pc format */
@@ -97,26 +99,27 @@ p:hover {
     background-color: rgba(0, 0, 0, 0.075);
     padding: 32px;
     margin: auto;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: arial;
     }
 #bio{
     width: 400px;
     margin: auto;
     padding: auto;
     margin-top:300px;
-    font-family: arial;
-    font-size: 24px;
+    font-size: 21px;
     }
 
-    /* this styles he content for the resume page */
+    /* this styles the content for the resume page */
 .contentresume{
     grid-area: c;
     background-color: rgba(0, 0, 0, 0.075);
     padding: 32px;
-    font-family: arial;
     margin: auto;
     overflow-x: hidden;
     overflow-y: scroll;
-    white-space: nowrap;
+    font-family: arial;
     }
 
     /* this styles the content for the portfolio page */
@@ -125,19 +128,30 @@ p:hover {
     background-color: rgba(0, 0, 0, 0.075);
     overflow-x: hidden;
     overflow-y: scroll;
-    white-space: nowrap;
+    font-family: arial;
+    font-size: 21px;
     }
 #content{
-    width: 400px;
-    height: 400px;
+    height:auto;
+    width:700px;
     margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 25px 50px 25px 50px;
     }
-#content:nth-child(even){
-    background-color: red;
-    }
-#content:nth-child(odd){
-    background-color: green;
-    }
+
+    /* this styles the images used in the portfolio */
+img{
+    display: inline-block;
+    width: 650px;
+    height: auto;
+}
+
+    /* this styles the captions used for each image */
+#caption{
+    display: inline-block;
+    width: 650px;
+}
 
     /* this styles the footer */
 #foot{
